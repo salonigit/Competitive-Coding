@@ -1,0 +1,38 @@
+//You have recently joined the college and today is the first day of your college. When you reached the College, you noticed your batchmates are gathered in different groups and you want to meet and handshake with each of them. As you have a shortage of time, you can meet with only N groups. Each group consists of Ni batchmates, where i represents the serial number of groups.
+
+You are given the number of batchmates in each group. Find out how many total handshakes you performed. Note that you are meeting only those groups which have an even number of batchmates.
+
+Input:
+The first line contains an integer denoting the number of groups
+Second-line will contain N space-separated integers denoting the number of batchmates in each group.
+Output:
+Output a single integer denoting the total number of handshakes.
+
+Sample Input:
+5
+
+4 5 7 4 3
+
+Sample Output:
+8
+
+EXPLANATION:
+The total number of handshakes is 8//
+
+Code :
+#include <stdio.h>
+
+int main(void) {
+	int group,shake=0;
+	scanf("%d",&group);
+	int arr[group];
+	for(int i=0; i<group; i++){
+	    scanf("%d",&arr[i]);
+	    if(arr[i]%2==0){
+	        shake=shake+arr[i];
+	    }
+	}
+	printf("%d",shake);
+	
+	return 0;
+}
