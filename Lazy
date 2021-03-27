@@ -1,0 +1,48 @@
+//Rohan has to go to the office daily. But Rohan does not want to go for Job, preferably he wants to take a rest and watch T.V.
+
+In his Office, two keepers count how many times an individual enters into the office place. Though the duty of a keeper is 24 hours a day, sometimes they fall asleep during their duty and could not track the entry of an individual in the office place. But one finer thing is that they never fall asleep concurrently. At least one of them remains awake and counts who enter the office place.
+
+Now boss of Rohan wants to calculate how many times Rohan has entered the Office. He asked the keeper and they give him two integers M and N, count of the first keeper and second keeper respectively.
+
+Help the boss to count the minimum and a maximum number of times Rohan could have entered into the office place.
+
+Input:
+The first line of the input contains an integer T denoting the number of test cases. The description of the T test cases follows.
+Each test case consists of a line containing two space-separated integers M and N.
+Output:
+For each test case, output a single line containing two space-separated integers, the minimum and a maximum number of times Rohan could have entered into the office place.
+
+Constraints
+1≤T≤100
+0≤M,N≤1000000
+Sample Input:
+1
+
+19 17
+
+Sample Output:
+19 36
+
+EXPLANATION:
+19 is the minimum and 36 is the maximum number of times Rohan could have entered into the office place//
+
+Code :
+#include <stdio.h>
+
+int main(void) {
+	int T;
+	scanf("%d",&T);
+	for(int i=0; i<T;i++){
+	    unsigned long int N=0,M=0,minimum=0,maximum;
+	    scanf("%llu %llu",&N,&M);
+	    if(N>=M){
+	        minimum=N;
+	    }
+	    else{
+	        minimum=M;
+	    }
+	    maximum=N+M;
+	    printf("%llu %llu \n",minimum,maximum);
+	}
+	return 0;
+}
