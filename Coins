@@ -1,0 +1,33 @@
+//Chef and Chefiana are playing a game.
+
+In this game, they decided that the loser will give the treat for a week to the winner.
+
+The game is about predicting the coins. Initially, some coins are given to chefiana now chef will predict the number of coins required to make it multiple of 100.
+
+Chef is not good at maths he wants your help. Help the chef to find the number of coins.
+
+Input:
+First-line will contain X, the number of coins.
+Output:
+Print the number of additional coins that he needs to collect before he gets the next prize.
+
+Constraints
+2≤X≤109
+Sample Input:
+140
+Sample Output:
+60
+EXPLANATION:
+He gets the next prize when he has collected 200 coins in total. To get it, he needs to collect 60 more coins.//
+
+Code :
+#include <stdio.h>
+
+int main(void) {
+    int coins,add,total;
+    scanf("%d",&coins);
+    total=100 - (coins%100);
+    printf("%d",total);
+	// your code goes here
+	return 0;
+}
